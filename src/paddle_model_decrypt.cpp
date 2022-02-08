@@ -38,11 +38,11 @@ int paddle_check_file_encrypted(const char* file_path) {
 }
 
 std::string decrypt_file(const char* file_path, const char* key) {
-  int ret = paddle_check_file_encrypted(file_path);
-  if (ret != CODE_OK) {
-    LOGD("[M]check file encrypted failed, code: %d", ret);
-    return std::string();
-  }
+//   int ret = paddle_check_file_encrypted(file_path);
+//   if (ret != CODE_OK) {
+//     LOGD("[M]check file encrypted failed, code: %d", ret);
+//     return std::string();
+//   }
 
 // std::string key_str = util::crypto::Base64Utils::decode(std::string(key));
   std::string key_str = baidu::base::base64::base64_decode(std::string(key));
